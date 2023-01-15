@@ -1,0 +1,20 @@
+<div>
+  <h1 class="font-bold text-4xl">StaticPages#homepage</h1>
+  <p>Find me in app/views/static_pages/homepage.html.erb</p>
+
+
+<%= render "form_flickr" %>
+
+<% if @photos %>
+<% binding.pry %>
+
+
+
+<div class="grid grid-cols-3 gap-4 mt-4">
+  <% @photos.each do |photo| %>
+    <div class="col-span-1">
+      <img src="<%= Flickr.url_n(photo)%> class="w-full h-64 object-cover">
+    </div>
+  <% end %>
+</div>
+<% end %>

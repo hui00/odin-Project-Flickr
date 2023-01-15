@@ -1,0 +1,5 @@
+<%= form_tag(static_pages_homepage_path, method: :get) do %>
+  <%= label_tag(:flickr_id, "Flickr ID:") %>
+  <%= select_tag(:flickr_id, options_for_select(@flickr_options, selected: params[:flickr_id].nil? ? @flickr_options[0] : params[:flickr_id])) %>
+  <%= submit_tag("Submit") %>
+<% end %>
