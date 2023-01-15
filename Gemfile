@@ -6,6 +6,8 @@ ruby "3.1.3"
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.4"
 
+gem 'flickr'
+
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 
@@ -85,3 +87,13 @@ group :development, :test do
 end
 gem "dotenv-rails"
 gem "devise"
+
+group :development, :test do
+  gem "awesome_print"
+  gem "pry"
+  gem "pry-byebug"
+  gem "pry-doc"
+  gem "pry-rails"
+  gem "pry-rescue"
+  gem "pry-theme"
+end
